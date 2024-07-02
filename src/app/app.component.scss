@@ -1,0 +1,52 @@
+:host {
+  .container {
+    // margin: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 16px;
+
+    > div {
+      padding: 15px;
+    }
+
+    .header {
+      font-weight: bold;
+      border-bottom: solid 1px lightgray;
+    }
+
+    .info {
+      border-bottom: solid 1px lightgray;
+    }
+
+    .add-btn {
+      border: none;
+      width: 100px;
+      height: 25px;
+      border-radius: 2px;
+      background: #75d2f9;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .content {
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+  }
+
+  .ip-searches {
+    display: flex;
+    align-items: center;
+
+    > .ip-search-index {
+      background: lightgray;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

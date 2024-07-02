@@ -1,0 +1,18 @@
+<div class="input-container">
+  <input
+    appInputMarker
+    #search
+    [disabled]="loading"
+    [ngClass]="{ error: error }"
+    [(ngModel)]="searchText"
+    type="text"
+  />
+  <div class="error-message" *ngIf="error">{{ errorMessage }}</div>
+</div>
+
+<ng-container *ngIf="!loading && !error">
+  <span [ngClass]="'flag fi fi-' + item.country"></span>
+  <div>{{ item.time }}</div>
+</ng-container>
+
+<app-loader [loading]="loading"></app-loader>
